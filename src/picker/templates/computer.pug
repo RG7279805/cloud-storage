@@ -1,0 +1,16 @@
+.container
+  .container__header
+    .flex-row.align-items-center
+      .flex-no-shrink.mr.sm-hidden
+        //- an empty icon
+        .icon.icon--large
+      .flex-grow
+        include selector
+      .flex-no-shrink.ml(data-bind="css: {'sm-hidden': attachMode()}")
+        #plupload_btn_cancel.icon.icon--large(
+            data-bind="css: {'invisible': attachMode()}")
+          .icon__close
+  .container__body
+    #computer_uploader.h-100
+      p(data-bind='translate: "computer/noSupport"')
+  include footer
